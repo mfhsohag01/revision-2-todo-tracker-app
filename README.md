@@ -1,16 +1,199 @@
-# React + Vite
+# Todo Tracker App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive task management application built with React and Tailwind CSS. Users can create, update, delete, search, and organize tasks efficiently with an attractive glassmorphism-inspired user interface.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Task Management
 
-## React Compiler
+- Add new tasks
+- Edit existing tasks
+- Delete individual tasks
+- Delete all tasks at once
+- Mark tasks as favorite
+- Priority-based task organization
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Search Functionality
 
-## Expanding the ESLint configuration
+- Search tasks instantly by title
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Task Details
+
+Each task contains:
+
+- Title
+- Description
+- Tags
+- Priority Level (High, Medium, Low)
+
+### User Interface
+
+- Responsive design
+- Glassmorphism-inspired UI
+- Modern dark theme
+- Interactive buttons and hover effects
+- Clean and organized layout
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+
+- React
+- JavaScript (ES6+)
+- Tailwind CSS
+- Vite
+
+### State Management
+
+- React Hooks
+  - useState
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+│
+├── components/
+│   ├── Header.jsx
+│   ├── HeroSection.jsx
+│   ├── SearchTask.jsx
+│   ├── TaskBoard.jsx
+│   ├── TaskList.jsx
+│   ├── TaskActions.jsx
+│   ├── TaskModal.jsx
+│   └── Footer.jsx
+│
+├── data/
+│   └── tasks.js
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## ⚙️ Installation
+
+### Clone the repository
+
+```bash
+git clone <repository-url>
+```
+
+### Navigate to project directory
+
+```bash
+cd revision-2-todo-tracker-app
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+Preview production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 📚 Concepts Practiced
+
+- Component-based architecture
+- Props drilling
+- State lifting
+- Conditional rendering
+- Form handling
+- Array methods (map, filter)
+- Event handling
+- Controlled components
+- Search implementation
+- CRUD operations
+- Responsive UI development
+
+---
+
+## 🎯 Learning Objectives
+
+This project was built to practice:
+
+- React fundamentals
+- Component communication
+- State management with hooks
+- Dynamic rendering
+- Modern UI styling using Tailwind CSS
+- Real-world CRUD application structure
+
+---
+
+## 📸 Application Features Overview
+
+### Add Task
+
+Users can create new tasks with title, description, tags, and priority.
+
+### Edit Task
+
+Existing tasks can be updated without creating duplicates.
+
+### Delete Task
+
+Individual tasks can be removed from the task list.
+
+### Delete All
+
+All tasks can be cleared with a single action.
+
+### Search Task
+
+Tasks can be searched dynamically through the search field.
+
+### Favorite Task
+
+Important tasks can be highlighted as favorites.
+
+---
+
+## Future Improvements
+
+- Local Storage persistence
+- Drag and drop task management
+- Task categories
+- Due dates
+- Authentication
+- Backend integration
+- Database support
+- Dark/Light mode toggle
+
+---
+
+## Author
+
+Developed as part of React practice and learning projects.
+
+---
+
+## License
+
+This project is open source and available under the MIT License.
