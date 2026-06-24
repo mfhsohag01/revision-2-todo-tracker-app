@@ -2,10 +2,12 @@ import { useState } from "react";
 
 export default function SearchTask({ onSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
+
   function handleClick(event) {
     event.preventDefault();
     onSearch(searchTerm);
   }
+
   return (
     <form>
       <div className="flex">
@@ -13,11 +15,17 @@ export default function SearchTask({ onSearch }) {
           <input
             type="search"
             id="search-dropdown"
-            className="z-20 block w-full bg-gray-800 px-4 py-2 pr-10 focus:outline-none"
+            className="z-20 block w-full px-4 py-2 pr-10 focus:outline-none"
             placeholder="Search Task"
             value={searchTerm}
-            onChange={() => setSearchTerm(event.target.value)}
+            onChange={(e) => setSearchTerm(e.target.value)}
             required
+            style={{
+              background: "rgba(255,255,255,0.05)",
+              backdropFilter: "blur(10px)",
+              border: "1px solid rgba(255,255,255,0.1)",
+              color: "white",
+            }}
           />
           <button
             type="submit"
@@ -33,9 +41,9 @@ export default function SearchTask({ onSearch }) {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
               />
             </svg>

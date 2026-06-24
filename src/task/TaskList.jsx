@@ -5,27 +5,22 @@ export default function TaskList({ tasks, onEdit, onDelete, onFav }) {
     <div className="overflow-auto">
       <table className="table-fixed overflow-auto xl:w-full">
         <thead>
-          <tr>
+          <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
             <th className="p-4 pb-8 text-sm font-semibold capitalize w-[48px]"></th>
             <th className="p-4 pb-8 text-sm font-semibold capitalize w-[300px]">
-              {" "}
-              Title{" "}
+              Title
             </th>
             <th className="p-4 pb-8 text-sm font-semibold capitalize w-full">
-              {" "}
-              Description{" "}
+              Description
             </th>
             <th className="p-4 pb-8 text-sm font-semibold capitalize md:w-[350px]">
-              {" "}
-              Tags{" "}
+              Tags
             </th>
             <th className="p-4 pb-8 text-sm font-semibold capitalize md:w-[100px]">
-              {" "}
-              Priority{" "}
+              Priority
             </th>
             <th className="p-4 pb-8 text-sm font-semibold capitalize md:w-[100px]">
-              {" "}
-              Options{" "}
+              Options
             </th>
           </tr>
         </thead>
@@ -33,7 +28,8 @@ export default function TaskList({ tasks, onEdit, onDelete, onFav }) {
           {tasks.map((task) => (
             <tr
               key={task.id}
-              className="border-b border-[#2E3443] [&>td]:align-baseline [&>td]:px-4 [&>td]:py-2"
+              className="[&>td]:align-baseline [&>td]:px-4 [&>td]:py-2"
+              style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}
             >
               <td>
                 <button onClick={() => onFav(task.id)}>
@@ -52,7 +48,14 @@ export default function TaskList({ tasks, onEdit, onDelete, onFav }) {
                 <ul className="flex justify-center gap-1.5 flex-wrap">
                   {task.tags.map((tag) => (
                     <li key={tag}>
-                      <span className="inline-block h-5 whitespace-nowrap rounded-[45px] bg-[#00D991A1] px-2.5 text-sm capitalize text-[#F4F5F6]">
+                      <span
+                        className="inline-block h-5 whitespace-nowrap rounded-[45px] px-2.5 text-sm capitalize text-[#F4F5F6]"
+                        style={{
+                          background: "rgba(0, 217, 145, 0.25)",
+                          border: "1px solid rgba(0, 217, 145, 0.4)",
+                          backdropFilter: "blur(6px)",
+                        }}
+                      >
                         {tag}
                       </span>
                     </li>
@@ -63,13 +66,13 @@ export default function TaskList({ tasks, onEdit, onDelete, onFav }) {
               <td>
                 <div className="flex items-center justify-center space-x-3">
                   <button
-                    className="text-red-500"
+                    className="text-red-400 hover:text-red-300 transition-colors"
                     onClick={() => onDelete(task.id)}
                   >
                     Delete
                   </button>
                   <button
-                    className="text-blue-500"
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
                     onClick={() => onEdit(task)}
                   >
                     Edit
